@@ -19,7 +19,7 @@
 //     const slug = edge.node.slug
 
 //     actions.createPage({
-//       path: `blog-posts/${slug}`,
+//       path: `blog/${slug}`,
 //       component: require.resolve(`./src/templates/blogPostTemplate.js`),
 //       context: { slug: slug },
 //     })

@@ -12,7 +12,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
-				icon: 'src/images/icon.png',
+				icon: 'src/assets/images/icon.png',
 			},
 		},
 		'gatsby-plugin-mdx',
@@ -51,17 +51,9 @@ module.exports = {
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'images',
-				path: './src/images/',
+				path: './src/assets/images/',
 			},
 			__key: 'images',
-		},
-		{
-			resolve: 'gatsby-source-filesystem',
-			options: {
-				name: 'pages',
-				path: './src/pages/',
-			},
-			__key: 'pages',
 		},
 		{
 			resolve: `gatsby-plugin-alias-imports`,
@@ -69,6 +61,7 @@ module.exports = {
 				alias: {
 					'@components': path.resolve(__dirname, 'src/components'),
 					'@global': path.resolve(__dirname, 'src/components/global'),
+					'@UI': path.resolve(__dirname, 'src/components/UI'),
 					'@images': path.resolve(__dirname, 'src/assets/images'),
 					'@styles': path.resolve(__dirname, 'src/assets/styles/'),
 				},

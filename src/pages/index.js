@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '@global/layout/layout'
-import SEO from '@global/seo'
+import Seo from '@global/seo'
 
 const IndexPage = () => (
 	<Layout>
-		<SEO title='Home' />
+		<Seo title='Home' />
 
 		<section className='wrapper-sm section text-block'>
 			<h2>Hello</h2>

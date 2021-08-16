@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
+import NavLinks from '@global/navLinks'
 import { Hamburger, Times, Logo } from '@images/icons'
 import * as styles from './header.module.scss'
 
@@ -18,11 +19,7 @@ const Header = () => {
 				</button>
 
 				<nav className={`${styles.nav} ${isOpen ? styles.open : ''}`}>
-					<Link to='/'>Home</Link>
-					<Link to='/examples'>Examples</Link>
-					<Link to='/'>Page</Link>
-					<Link to='/'>Page</Link>
-					<Link to='/'>Page</Link>
+					<NavLinks />
 				</nav>
 			</div>
 		</header>
