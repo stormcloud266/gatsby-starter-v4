@@ -12,6 +12,7 @@ const Container = ({
 	sectionBottom,
 	textBlock,
 	flex,
+	collapseOnMd,
 	justify,
 	align,
 	bgDark,
@@ -34,6 +35,7 @@ const Container = ({
 		sectionBottom && styles.sectionBottom,
 		textBlock && styles.textBlock,
 		flex && styles.flex,
+		collapseOnMd && styles.collapseOnMd,
 		bgDark && styles.bgDark,
 		bgAccent && styles.bgAccent,
 		className && className
@@ -60,6 +62,7 @@ Container.propTypes = {
 	sectionTop: PropTypes.bool,
 	sectionBottom: PropTypes.bool,
 	flex: PropTypes.bool,
+	collapseOnMd: PropTypes.bool,
 	justify: PropTypes.oneOf([
 		'start',
 		'center',

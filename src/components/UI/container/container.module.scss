@@ -2,39 +2,39 @@
 
 // sections
 .section {
-	padding-top: 12rem;
-	padding-bottom: 12rem;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
 }
 .sectionTop {
-	padding-top: 12rem;
+	padding-top: 10rem;
 }
 .sectionBottom {
-	padding-bottom: 12rem;
+	padding-bottom: 10rem;
 }
 
 @media only screen and (max-width: 900px) {
 	.section {
-		padding-top: 10rem;
-		padding-bottom: 10rem;
+		padding-top: 8rem;
+		padding-bottom: 8rem;
 	}
 	.sectionTop {
-		padding-top: 10rem;
+		padding-top: 8rem;
 	}
 	.sectionBottom {
-		padding-bottom: 10rem;
+		padding-bottom: 8rem;
 	}
 }
 
 @media only screen and (max-width: 600px) {
 	.section {
-		padding-top: 8rem;
-		padding-bottom: 8rem;
+		padding-top: 6rem;
+		padding-bottom: 6rem;
 	}
 	.sectionTop {
-		padding-top: 8rem;
+		padding-top: 6rem;
 	}
 	.sectionBottom {
-		padding-bottom: 8rem;
+		padding-bottom: 6rem;
 	}
 }
 
@@ -64,6 +64,18 @@
 
 .flex {
 	display: flex;
+}
+
+@media only screen and (max-width: 900px) {
+	.collapseOnMd {
+		flex-direction: column;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.flex {
+		flex-direction: column;
+	}
 }
 
 // colors
