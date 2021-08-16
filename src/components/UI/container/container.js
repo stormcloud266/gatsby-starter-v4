@@ -11,10 +11,20 @@ const Container = ({
 	sectionTop,
 	sectionBottom,
 	textBlock,
+	flex,
+	justify,
+	align,
+	bgDark,
+	bgAccent,
 	isSection,
 	className,
 	children,
 }) => {
+	const stylesInline = {
+		justifyContent: justify ? justify : null,
+		alignItems: align ? align : null,
+	}
+
 	const classes = classnames(
 		wrapper && styles.wrapper,
 		wrapperSm && styles.wrapperSm,
@@ -23,13 +33,20 @@ const Container = ({
 		sectionTop && styles.sectionTop,
 		sectionBottom && styles.sectionBottom,
 		textBlock && styles.textBlock,
+		flex && styles.flex,
+		bgDark && styles.bgDark,
+		bgAccent && styles.bgAccent,
 		className && className
 	)
 
 	return isSection ? (
-		<section className={classes}>{children}</section>
+		<section className={classes} style={stylesInline}>
+			{children}
+		</section>
 	) : (
-		<div className={classes}>{children}</div>
+		<div className={classes} style={stylesInline}>
+			{children}
+		</div>
 	)
 }
 
@@ -42,7 +59,18 @@ Container.propTypes = {
 	section: PropTypes.bool,
 	sectionTop: PropTypes.bool,
 	sectionBottom: PropTypes.bool,
+	flex: PropTypes.bool,
+	justify: PropTypes.oneOf([
+		'start',
+		'center',
+		'space-between',
+		'space-around',
+		'space-evenly',
+	]),
+	align: PropTypes.oneOf(['stretch', 'center', 'start', 'end']),
 	textBlock: PropTypes.bool,
+	bgDark: PropTypes.bool,
+	bgAccent: PropTypes.bool,
 	isSection: PropTypes.bool,
 	className: PropTypes.string,
 	children: PropTypes.node.isRequired,

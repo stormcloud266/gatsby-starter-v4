@@ -1,3 +1,6 @@
+@import '../../global/layout/variables';
+
+// sections
 .section {
 	padding-top: 12rem;
 	padding-bottom: 12rem;
@@ -56,6 +59,29 @@
 		max-width: 60rem;
 	}
 }
+
+// flex
+
+.flex {
+	display: flex;
+}
+
+// colors
+.bgDark {
+	background-color: $bg-dark;
+	color: rgb(231, 231, 231);
+	h1,
+	h2,
+	h3 {
+		color: white;
+	}
+}
+
+.bgAccent {
+	background-color: $bg-accent;
+}
+
+// textBlock
 
 .textBlock {
 	h1,

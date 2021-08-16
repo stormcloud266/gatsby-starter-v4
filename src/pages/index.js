@@ -8,19 +8,21 @@ import { Container } from '@UI'
 const IndexPage = () => (
 	<Layout>
 		<Seo title='Home' />
-		<Container wrapperSm section textBlock>
-			<h2>Hello</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam odio
-				minima magni, modi molestiae reiciendis illo? Totam cumque eum
-				temporibus!
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam odio
-				minima magni, modi molestiae reiciendis illo? Totam cumque eum
-				temporibus!
-			</p>
-			<Link to='/examples'>Examples Page</Link>
+		<Container bgAccent>
+			<Container wrapperSm section textBlock>
+				<h1>Hello</h1>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+					deserunt facere enim ullam quos expedita repellat inventore porro quam
+					dolorum.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+					deserunt facere enim ullam quos expedita repellat inventore porro quam
+					dolorum.
+				</p>
+				<Link to='/examples'>Examples Page</Link>
+			</Container>
 		</Container>
 	</Layout>
 )
