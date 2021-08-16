@@ -1,0 +1,93 @@
+.section {
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+}
+.sectionTop {
+	padding-top: 12rem;
+}
+.sectionBottom {
+	padding-bottom: 12rem;
+}
+
+@media only screen and (max-width: 900px) {
+	.section {
+		padding-top: 10rem;
+		padding-bottom: 10rem;
+	}
+	.sectionTop {
+		padding-top: 10rem;
+	}
+	.sectionBottom {
+		padding-bottom: 10rem;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.section {
+		padding-top: 8rem;
+		padding-bottom: 8rem;
+	}
+	.sectionTop {
+		padding-top: 8rem;
+	}
+	.sectionBottom {
+		padding-bottom: 8rem;
+	}
+}
+
+// wrappers
+.wrapper,
+.wrapperSm,
+.wrapperSmOnTab {
+	width: 100%;
+	max-width: 114rem;
+	padding-left: 1.8rem;
+	padding-right: 1.8rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wrapperSm {
+	max-width: 60rem;
+}
+
+@media only screen and (max-width: 900px) {
+	.wrapperSmOnTab {
+		max-width: 60rem;
+	}
+}
+
+.textBlock {
+	h1,
+	h2 {
+		margin-bottom: 1.8rem;
+	}
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 1rem;
+	}
+	p,
+	li {
+		margin-bottom: 1.6rem;
+	}
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		padding-top: 1.6rem;
+	}
+
+	.button {
+		margin-top: 1rem;
+	}
+
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+	& > *:first-child {
+		padding-top: 0;
+	}
+}

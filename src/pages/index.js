@@ -3,12 +3,12 @@ import { Link } from 'gatsby'
 
 import Layout from '@global/layout/layout'
 import Seo from '@global/seo'
+import { Container } from '@UI'
 
 const IndexPage = () => (
 	<Layout>
 		<Seo title='Home' />
-
-		<section className='wrapper-sm section text-block'>
+		<Container wrapperSm section textBlock>
 			<h2>Hello</h2>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam odio
@@ -21,7 +21,7 @@ const IndexPage = () => (
 				temporibus!
 			</p>
 			<Link to='/examples'>Examples Page</Link>
-		</section>
+		</Container>
 	</Layout>
 )
 

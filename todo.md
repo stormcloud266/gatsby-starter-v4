@@ -1,7 +1,8 @@
 **UI**
 
 Button
-Container (wrapper, section, flex, grid, text-block)
+Flex
+Grid
 Title
 
 **MISC**
