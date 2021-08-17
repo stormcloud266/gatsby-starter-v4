@@ -20,10 +20,47 @@ const IndexPage = () => (
 				deserunt facere enim ullam quos expedita repellat inventore porro quam
 				dolorum.
 			</p>
-			<Link to='/examples'>Examples Page</Link>
+			<Link to='/examples' className='button cta'>
+				Examples Page
+			</Link>
 		</Container>
 
 		<Container bgAccent>
+			<Container wrapper section textBlock>
+				<Flex autoLayout>
+					<div>
+						<h1>Hello</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+							deserunt facere enim ullam quos expedita repellat inventore porro
+							quam dolorum.
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+							deserunt facere enim ullam quos expedita repellat inventore porro
+							quam dolorum.
+						</p>
+						<button onClick={() => console.log('hi')}>Examples Page</button>
+					</div>
+					<div>
+						<h1>Hello</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+							deserunt facere enim ullam quos expedita repellat inventore porro
+							quam dolorum.
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+							deserunt facere enim ullam quos expedita repellat inventore porro
+							quam dolorum.
+						</p>
+						<a href='https://music.com'>Examples Page</a>
+					</div>
+				</Flex>
+			</Container>
+		</Container>
+
+		<Container bgDark>
 			<Container wrapper section>
 				<Flex justify='space-between' collapseOnMd>
 					<div

@@ -3,12 +3,12 @@
 Grid
 Button
 Title
-make flex component with flexItem components
 
 **MISC**
 
+replace lightcoral with variable
 move to typescript
-replace logo
 replace favicon
+figure out importing media query includes and change to ems
 seo image publicPath in static folder
 seo meta add to config

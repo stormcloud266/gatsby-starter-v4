@@ -20,10 +20,6 @@ body {
 	line-height: 1.6;
 }
 
-main {
-	padding-top: 7rem;
-}
-
 h1,
 h2,
 h3,
@@ -46,19 +42,48 @@ img {
 a {
 	text-decoration: none;
 	color: lightcoral;
-	transition: color 0.3s;
+	transition: color 0.2s;
 	&:hover {
 		color: lighten(lightcoral, 10%);
 	}
 }
 
 button,
+input,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+button,
 .button {
-	padding: 1rem 1.4rem;
+	padding: 0.6rem 1.8rem;
 	cursor: pointer;
 	color: #333;
-	background-color: lightcoral;
-	border-radius: 3px;
-	border: 1px solid 5555;
+	font-size: 1.5rem;
+	font-weight: bold;
+	background-color: white;
+	border: 2px solid lightcoral;
+	color: lightcoral;
+	outline: none;
 	display: inline-block;
+	transition: all 0.2s;
+	box-shadow: 0px 0px #333;
+
+	&:hover {
+		background-color: lighten(lightcoral, 10%);
+		border-color: lighten(lightcoral, 10%);
+		color: #333;
+		box-shadow: 2px 2px #333;
+	}
+
+	&.cta {
+		background-color: lightcoral;
+		color: #333;
+		&:hover {
+			background-color: lighten(lightcoral, 10%);
+			border-color: lighten(lightcoral, 10%);
+		}
+	}
 }
