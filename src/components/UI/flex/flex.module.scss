@@ -1,0 +1,41 @@
+// flex
+
+.flex {
+	display: flex;
+	width: 100%;
+	background-color: rgb(171, 184, 184);
+	&.autoLayout > * {
+		background-color: pink;
+		margin-right: 2rem;
+		flex: 1;
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.collapseOnMd {
+		flex-direction: column;
+		&.autoLayout > * {
+			margin-right: 0;
+			margin-bottom: 2rem;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.flex {
+		flex-direction: column;
+		&.autoLayout > * {
+			margin-right: 0;
+			margin-bottom: 2rem;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

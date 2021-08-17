@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import Layout from '@global/layout/layout'
 import Seo from '@global/seo'
-import { Container } from '@UI'
+import { Container, Flex } from '@UI'
 
 const IndexPage = () => (
 	<Layout>
@@ -22,12 +22,38 @@ const IndexPage = () => (
 			</p>
 			<Link to='/examples'>Examples Page</Link>
 		</Container>
+
 		<Container bgAccent>
-			<Container wrapperSmOnTab section flex justify='space-between'>
-				<h2>Hey</h2>
-				<h2>Hey</h2>
-				<h2>Hey</h2>
-				<h2>Hey</h2>
+			<Container wrapper section>
+				<Flex justify='space-between' collapseOnMd>
+					<div
+						style={{
+							background: 'orange',
+							height: '50px',
+							width: '100%',
+						}}
+					>
+						okay
+					</div>
+					<div
+						style={{
+							background: 'orange',
+							height: '50px',
+							width: '100%',
+						}}
+					>
+						okay
+					</div>
+					<div
+						style={{
+							background: 'orange',
+							height: '50px',
+							width: '100%',
+						}}
+					>
+						okay
+					</div>
+				</Flex>
 			</Container>
 		</Container>
 	</Layout>

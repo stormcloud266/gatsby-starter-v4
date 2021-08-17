@@ -3,6 +3,7 @@
 Grid
 Button
 Title
+make flex component with flexItem components
 
 **MISC**
 

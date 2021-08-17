@@ -41,7 +41,7 @@
 // wrappers
 .wrapper,
 .wrapperSm,
-.wrapperSmOnTab {
+.wrapperSmOnMd {
 	width: 100%;
 	max-width: 114rem;
 	padding-left: 1.8rem;
@@ -55,7 +55,7 @@
 }
 
 @media only screen and (max-width: 900px) {
-	.wrapperSmOnTab {
+	.wrapperSmOnMd {
 		max-width: 60rem;
 	}
 }
