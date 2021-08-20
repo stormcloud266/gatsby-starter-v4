@@ -1,6 +1,8 @@
+@import '../../global/layout/variables';
+
 .header {
-	background-color: #ffffff;
-	border-bottom: 2px solid lightcoral;
+	background-color: $color-header-background;
+	border-bottom: 2px solid $color-cta;
 
 	// positioning
 	position: sticky;
@@ -40,7 +42,7 @@
 	display: none;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 56.25em) {
 	.toggle {
 		// overwrite default button styles
 		border: none;
@@ -85,7 +87,7 @@
 		align-items: center;
 
 		a {
-			font-size: 2.4rem;
+			font-size: $font-size-3;
 			margin-left: 0;
 			margin-bottom: 2.8rem;
 			opacity: 0;

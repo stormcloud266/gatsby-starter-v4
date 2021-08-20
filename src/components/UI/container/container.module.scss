@@ -12,7 +12,7 @@
 	padding-bottom: 10rem;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 56.25em) {
 	.section {
 		padding-top: 8rem;
 		padding-bottom: 8rem;
@@ -25,7 +25,7 @@
 	}
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 37.5em) {
 	.section {
 		padding-top: 6rem;
 		padding-bottom: 6rem;
@@ -43,7 +43,7 @@
 .wrapperSm,
 .wrapperSmOnMd {
 	width: 100%;
-	max-width: 114rem;
+	max-width: $wrapper-width;
 	padding-left: 1.8rem;
 	padding-right: 1.8rem;
 	margin-left: auto;
@@ -51,12 +51,12 @@
 }
 
 .wrapperSm {
-	max-width: 60rem;
+	max-width: $wrapper-small-width;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 56.25em) {
 	.wrapperSmOnMd {
-		max-width: 60rem;
+		max-width: $wrapper-small-width;
 	}
 }
 
@@ -66,13 +66,13 @@
 	display: flex;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 56.25em) {
 	.collapseOnMd {
 		flex-direction: column;
 	}
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 37.5em) {
 	.flex {
 		flex-direction: column;
 	}
@@ -80,7 +80,7 @@
 
 // colors
 .bgDark {
-	background-color: $bg-dark;
+	background-color: $color-background-dark;
 	color: rgb(231, 231, 231);
 	h1,
 	h2,
@@ -90,7 +90,7 @@
 }
 
 .bgAccent {
-	background-color: $bg-accent;
+	background-color: $color-background-accent;
 }
 
 // textBlock

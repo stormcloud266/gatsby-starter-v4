@@ -1,18 +1,18 @@
+@import '../../global/layout/variables';
+
 .footer {
-  padding: 3.2rem 0;
-  font-size: 1.6rem;
-  background-color: #1e1e1e;
-  text-align: center;
+	padding: 3.2rem 0;
+	font-size: $font-size-0;
+	background-color: $color-footer-background;
+	text-align: center;
 }
 
-.nav { 
-
-  a {
-    color: #fff;
-    margin: 0 2rem;
-  }
+.nav {
+	a {
+		color: #fff;
+		margin: 0 2rem;
+	}
 }
 
-@media only screen and (max-width: 900px) {
-
+@media only screen and (max-width: 56.25em) {
 } // end of whenMedium

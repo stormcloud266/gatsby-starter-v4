@@ -1,2 +1,35 @@
-$bg-dark: #474747;
-$bg-accent: #f3f3f3;
+///////////////// colors /////////////////
+$color-text-light: #f1f1f1;
+$color-text-light-primary: #ffffff;
+$color-text-light-tertiary: #d6d6d6;
+$color-text-dark: #2e2e33;
+$color-text-dark-primary: #1d1d22;
+$color-text-dark-tertiary: #57575f;
+$color-link: #54adc6;
+$color-cta: #b5ebfa;
+$color-primary: #b5ebfa;
+$color-secondary: #ceb1ff;
+$color-background: #ffffff;
+$color-background-accent: #f3f3f3;
+$color-background-dark: #474747;
+
+$color-header-background: $color-background;
+$color-footer-background: #1e1e1e;
+
+///////////////// fonts /////////////////
+$font-family: 'Droid Sans', sans-serif;
+$font-family-title: 'Droid Serif', serif;
+$font-size-0: 1.4rem;
+$font-size-1: 1.6rem;
+$font-size-2: 1.9rem;
+$font-size-3: 2.3rem;
+$font-size-4: 2.7rem;
+$font-size-5: 3.3rem;
+$font-size-6: 4rem;
+$font-size-7: 4.8rem;
+
+///////////////// sizes /////////////////
+$breakpoint-small: 37.5em;
+$breakpoint-medium: 56.25em;
+$wrapper-width: 120rem;
+$wrapper-small-width: 60rem;
