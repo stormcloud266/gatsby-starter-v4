@@ -2,46 +2,48 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
-const Seo = ({
-	title = `My Starter`,
-	description = `This is a description`,
-	url = `site.com`,
-	imageUrl,
-	article,
-}) => {
+const Seo = ({ title, description, url, imageUrl, article }) => {
 	const data = useStaticQuery(graphql`
 		query SeoQuery {
-			banner: file(name: { eq: "starter-banner" }) {
+			file(name: { eq: "meta-card-banner" }) {
 				publicURL
 			}
-			meta: site {
+			site {
 				siteMetadata {
+					title
+					description
 					siteUrl
 				}
 			}
 		}
 	`)
+	console.log('data: ', data)
 
 	const cardImageUrl = imageUrl
 		? imageUrl
-		: data.meta.siteMetadata.siteUrl + data.banner.publicURL
+		: data.site.siteMetadata.siteUrl + data.file.publicURL
+
+	const siteTitle = title ? title : data.site.siteMetadata.title
+	const siteDescription = description
+		? description
+		: data.site.siteMetadata.description
 
 	return (
 		<Helmet>
-			<title>{title}</title>
-			<meta name='description' content={description} />
+			<title>{siteTitle}</title>
+			<meta name='description' content={siteDescription} />
 
 			{/***********  twitter cards ***********/}
 			<meta name='twitter:card' content='summary_large_image' />
-			<meta name='twitter:title' content={title} />
-			<meta name='twitter:description' content={description} />
+			<meta name='twitter:title' content={siteTitle} />
+			<meta name='twitter:description' content={siteDescription} />
 			<meta name='twitter:image' content={cardImageUrl} />
 
 			{/***********  open graph ***********/}
 			<meta property='og:url' content={url} />
 			<meta property='og:type' content={article ? 'article' : 'website'} />
-			<meta property='og:title' content={title} />
-			<meta property='og:description' content={description} />
+			<meta property='og:title' content={siteTitle} />
+			<meta property='og:description' content={siteDescription} />
 			<meta property='og:image' content={cardImageUrl} />
 		</Helmet>
 	)

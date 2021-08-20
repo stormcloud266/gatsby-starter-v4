@@ -7,7 +7,7 @@ import { Container, Flex } from '@UI'
 
 const IndexPage = () => (
 	<Layout>
-		<Seo title='Home' />
+		<Seo />
 		<Container wrapperSm section textBlock>
 			<h1>Hello</h1>
 			<p>
