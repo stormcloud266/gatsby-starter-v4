@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '@global/layout/layout'
 import Seo from '@global/seo'
-import { Container, Flex, Card } from '@UI'
+import { Container, Flex, Card, Title } from '@UI'
 
 const IndexPage = ({ data }) => (
 	<Layout>
@@ -62,6 +62,7 @@ const IndexPage = ({ data }) => (
 
 		<Container>
 			<Container wrapper section>
+				<Title>hello</Title>
 				<Flex justify='space-between' align='center' collapseOnMd autoLayout>
 					<Card image={data.cardImage} shadow>
 						<div
