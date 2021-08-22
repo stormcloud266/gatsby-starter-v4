@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 import Layout from '@global/layout/layout'
 import Seo from '@global/seo'
-import { Container, Flex } from '@UI'
+import { Container, Flex, Card } from '@UI'
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
 	<Layout>
 		<Seo />
 		<Container wrapperSm section textBlock>
@@ -60,36 +60,66 @@ const IndexPage = () => (
 			</Container>
 		</Container>
 
-		<Container bgDark>
+		<Container>
 			<Container wrapper section>
-				<Flex justify='space-between' collapseOnMd>
-					<div
-						style={{
-							background: 'orange',
-							height: '50px',
-							width: '100%',
-						}}
-					>
-						okay
-					</div>
-					<div
-						style={{
-							background: 'orange',
-							height: '50px',
-							width: '100%',
-						}}
-					>
-						okay
-					</div>
-					<div
-						style={{
-							background: 'orange',
-							height: '50px',
-							width: '100%',
-						}}
-					>
-						okay
-					</div>
+				<Flex justify='space-between' align='center' collapseOnMd autoLayout>
+					<Card image={data.cardImage} shadow>
+						<div
+							style={{
+								display: 'flex',
+								flexDirection: 'column',
+								justifyContent: 'space-between',
+							}}
+						>
+							<div>
+								<h3>Lorem ipsum dolor sit amet.</h3>
+								<p>
+									Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+									consectetur adipisicing elit. Quam laboriosam exercitationem
+									quisquam.
+								</p>
+							</div>
+							<a href='/' className='button'>
+								click
+							</a>
+						</div>
+					</Card>
+					<Card image={data.cardImage} outline>
+						<div
+							style={{
+								display: 'flex',
+								flex: 1,
+								flexDirection: 'column',
+								justifyContent: 'space-between',
+							}}
+						>
+							<div>
+								<h3>Lorem ipsum dolor sit amet.</h3>
+								<p>Lorem ipsum</p>
+							</div>
+							<a href='/' className='button'>
+								click
+							</a>
+						</div>
+					</Card>
+					<Card image={data.cardImage} outline>
+						<div
+							style={{
+								display: 'flex',
+								flex: 1,
+								flexDirection: 'column',
+								justifyContent: 'space-between',
+							}}
+						>
+							<div>
+								<h3>Lorem ipsum dolor sit amet.</h3>
+								<p>Lorem ipsum</p>
+							</div>
+							<a href='/' className='button'>
+								click
+							</a>
+						</div>
+					</Card>
 				</Flex>
 			</Container>
 		</Container>
@@ -97,3 +127,13 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const query = graphql`
+	query HomePageQuery {
+		cardImage: file(relativePath: { eq: "meta-card-banner.png" }) {
+			childImageSharp {
+				gatsbyImageData(layout: CONSTRAINED, width: 400, placeholder: BLURRED)
+			}
+		}
+	}
+`

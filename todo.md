@@ -3,6 +3,6 @@
 Grid
 Button
 Title
-Card
 
 **MISC**
+flex align on small screens

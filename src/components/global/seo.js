@@ -17,7 +17,6 @@ const Seo = ({ title, description, url, imageUrl, article }) => {
 			}
 		}
 	`)
-	console.log('data: ', data)
 
 	const cardImageUrl = imageUrl
 		? imageUrl
