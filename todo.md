@@ -5,4 +5,6 @@ Button
 **MISC**
 flex align on small screens
 clean up for loops in grid
+add for loop into mobile nav
+add missing prototypes
 colors to hsl (these css variables https://www.youtube.com/watch?v=EJtmfkKulNA)

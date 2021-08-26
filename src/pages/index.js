@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '@global/layout/layout'
 import Seo from '@global/seo'
-import { Container, Flex, Card, Title, Grid } from '@UI'
+import { Container, Flex, Card, Title, Grid, Button } from '@UI'
 
 const IndexPage = ({ data }) => (
 	<Layout>
@@ -20,9 +20,9 @@ const IndexPage = ({ data }) => (
 				deserunt facere enim ullam quos expedita repellat inventore porro quam
 				dolorum.
 			</p>
-			<Link to='/examples' className='button cta'>
+			<Button to='/examples' cta>
 				Examples Page
-			</Link>
+			</Button>
 		</Container>
 
 		<Container bgAccent>
@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => (
 							deserunt facere enim ullam quos expedita repellat inventore porro
 							quam dolorum.
 						</p>
-						<button onClick={() => console.log('hi')}>Examples Page</button>
+						<Button onClick={() => console.log('hi')}>Examples Page</Button>
 					</div>
 					<div>
 						<h1>Hello</h1>
@@ -54,7 +54,7 @@ const IndexPage = ({ data }) => (
 							deserunt facere enim ullam quos expedita repellat inventore porro
 							quam dolorum.
 						</p>
-						<a href='https://music.com'>Examples Page</a>
+						<Button href='https://music.com'>Examples Page</Button>
 					</div>
 				</Flex>
 			</Container>
@@ -79,9 +79,7 @@ const IndexPage = ({ data }) => (
 								quisquam.
 							</p>
 						</div>
-						<a href='/' className='button'>
-							click
-						</a>
+						<Button href='https://google.com'>click</Button>
 					</div>
 				</Card>
 				<Card image={data.cardImage} outline>
