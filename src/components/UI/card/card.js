@@ -5,7 +5,6 @@ import classnames from 'classnames'
 import * as styles from './card.module.scss'
 
 const Card = ({ image, children, shadow, outline }) => {
-	console.log('image: ', image)
 	const cardImage = getImage(image)
 	const classes = classnames(
 		shadow && styles.shadow,

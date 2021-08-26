@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '@global/layout/layout'
 import Seo from '@global/seo'
-import { Container, Flex, Card, Title } from '@UI'
+import { Container, Flex, Card, Title, Grid } from '@UI'
 
 const IndexPage = ({ data }) => (
 	<Layout>
@@ -60,68 +60,86 @@ const IndexPage = ({ data }) => (
 			</Container>
 		</Container>
 
-		<Container>
-			<Container wrapper section>
-				<Title>hello</Title>
-				<Flex justify='space-between' align='center' collapseOnMd autoLayout>
-					<Card image={data.cardImage} shadow>
-						<div
-							style={{
-								display: 'flex',
-								flexDirection: 'column',
-								justifyContent: 'space-between',
-							}}
-						>
-							<div>
-								<h3>Lorem ipsum dolor sit amet.</h3>
-								<p>
-									Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
-									consectetur adipisicing elit. Quam laboriosam exercitationem
-									quisquam.
-								</p>
-							</div>
-							<a href='/' className='button'>
-								click
-							</a>
+		<Container wrapper section>
+			<Title>hello</Title>
+			<Flex justify='space-between' align='center' collapseOnMd autoLayout>
+				<Card image={data.cardImage} shadow>
+					<div
+						style={{
+							display: 'flex',
+							flexDirection: 'column',
+							justifyContent: 'space-between',
+						}}
+					>
+						<div>
+							<h3>Lorem ipsum dolor sit amet.</h3>
+							<p>
+								Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet
+								consectetur adipisicing elit. Quam laboriosam exercitationem
+								quisquam.
+							</p>
 						</div>
-					</Card>
-					<Card image={data.cardImage} outline>
-						<div
-							style={{
-								display: 'flex',
-								flex: 1,
-								flexDirection: 'column',
-								justifyContent: 'space-between',
-							}}
-						>
-							<div>
-								<h3>Lorem ipsum dolor sit amet.</h3>
-								<p>Lorem ipsum</p>
-							</div>
-							<a href='/' className='button'>
-								click
-							</a>
+						<a href='/' className='button'>
+							click
+						</a>
+					</div>
+				</Card>
+				<Card image={data.cardImage} outline>
+					<div
+						style={{
+							display: 'flex',
+							flex: 1,
+							flexDirection: 'column',
+							justifyContent: 'space-between',
+						}}
+					>
+						<div>
+							<h3>Lorem ipsum dolor sit amet.</h3>
+							<p>Lorem ipsum</p>
 						</div>
-					</Card>
-					<Card image={data.cardImage} outline>
-						<div
-							style={{
-								display: 'flex',
-								flex: 1,
-								flexDirection: 'column',
-								justifyContent: 'space-between',
-							}}
-						>
-							<div>
-								<h3>Lorem ipsum dolor sit amet.</h3>
-								<p>Lorem ipsum</p>
-							</div>
-							<a href='/' className='button'>
-								click
-							</a>
+						<a href='/' className='button'>
+							click
+						</a>
+					</div>
+				</Card>
+				<Card image={data.cardImage} outline>
+					<div
+						style={{
+							display: 'flex',
+							flex: 1,
+							flexDirection: 'column',
+							justifyContent: 'space-between',
+						}}
+					>
+						<div>
+							<h3>Lorem ipsum dolor sit amet.</h3>
+							<p>Lorem ipsum</p>
 						</div>
-					</Card>
-				</Flex>
+						<a href='/' className='button'>
+							click
+						</a>
+					</div>
+				</Card>
+			</Flex>
+		</Container>
+
+		<Container bgAccent>
+			<Container section wrapper>
+				<Grid columns={5} gap='lg'>
+					{['1', '2', '3', '4', '1', '2', '3', '4', '1', '2', '3', '4'].map(
+						(item) => (
+							<div
+								style={{
+									width: '100%',
+									height: 60,
+									background: 'pink',
+								}}
+							>
+								{item}
+							</div>
+						)
+					)}
+				</Grid>
 			</Container>
 		</Container>
 	</Layout>
