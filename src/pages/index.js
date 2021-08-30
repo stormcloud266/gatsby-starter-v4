@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => (
 
 		<Container wrapper section>
 			<Title>hello</Title>
-			<Flex justify='space-between' align='center' collapseOnMd autoLayout>
+			<Flex autoLayout>
 				<Card image={data.cardImage} shadow>
 					<div
 						style={{

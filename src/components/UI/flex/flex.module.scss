@@ -17,10 +17,13 @@
 	.collapseOnMd {
 		flex-direction: column;
 		&.autoLayout > * {
-			margin-right: 0;
+			margin-right: auto;
+			margin-left: auto;
 			margin-bottom: 2rem;
 			&:last-of-type {
 				margin-bottom: 0;
+				margin-right: auto;
+				margin-left: auto;
 			}
 		}
 	}
@@ -30,10 +33,13 @@
 	.flex {
 		flex-direction: column;
 		&.autoLayout > * {
-			margin-right: 0;
+			margin-right: auto;
+			margin-left: auto;
 			margin-bottom: 2rem;
 			&:last-of-type {
 				margin-bottom: 0;
+				margin-right: auto;
+				margin-left: auto;
 			}
 		}
 	}
