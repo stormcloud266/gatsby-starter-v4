@@ -1,5 +1,5 @@
-@import '../../global/layout/globalStyles/variables';
-@import '../../global/layout/globalStyles/mixins';
+@import '@globalStyles/variables';
+@import '@globalStyles/mixins';
 
 .grid {
 	display: grid;
