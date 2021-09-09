@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import * as styles from './button.module.scss'
 
@@ -38,3 +39,12 @@ const Button = ({ href, to, cta, children, className, ...rest }) => {
 }
 
 export default Button
+
+Button.propTypes = {
+	href: PropTypes.string,
+	to: PropTypes.string,
+	cta: PropTypes.bool,
+	children: PropTypes.node.isRequired,
+	rest: PropTypes.object,
+	className: PropTypes.string,
+}

@@ -27,5 +27,6 @@ Card.propTypes = {
 	shadow: PropTypes.bool,
 	outline: PropTypes.bool,
 	image: PropTypes.object,
+	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
 }

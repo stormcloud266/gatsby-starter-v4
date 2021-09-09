@@ -1,5 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
+import PropTypes from 'prop-types'
 import * as styles from './grid.module.scss'
 
 const Grid = ({ children, columns, gap, className }) => {
@@ -20,3 +21,10 @@ const Grid = ({ children, columns, gap, className }) => {
 }
 
 export default Grid
+
+Grid.propTypes = {
+	columns: PropTypes.number,
+	gap: PropTypes.oneOf(['sm', 'lg']),
+	className: PropTypes.string,
+	children: PropTypes.node.isRequired,
+}

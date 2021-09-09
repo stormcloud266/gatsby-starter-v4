@@ -22,6 +22,7 @@ export default Flex
 
 Flex.propTypes = {
 	collapseOnMd: PropTypes.bool,
+	autoLayout: PropTypes.bool,
 	isSection: PropTypes.bool,
 	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
