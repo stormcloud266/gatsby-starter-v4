@@ -1,4 +1,5 @@
-@import '../../global/layout/variables';
+@import '../../global/layout/globalStyles/variables';
+@import '../../global/layout/globalStyles/mixins';
 
 // sections
 .section {
@@ -12,7 +13,7 @@
 	padding-bottom: 10rem;
 }
 
-@media only screen and (max-width: 56.25em) {
+@include whenMedium {
 	.section {
 		padding-top: 8rem;
 		padding-bottom: 8rem;
@@ -25,7 +26,7 @@
 	}
 }
 
-@media only screen and (max-width: 37.5em) {
+@include whenSmall {
 	.section {
 		padding-top: 6rem;
 		padding-bottom: 6rem;
@@ -54,7 +55,7 @@
 	max-width: $wrapper-small-width;
 }
 
-@media only screen and (max-width: 56.25em) {
+@include whenMedium {
 	.wrapperSmOnMd {
 		max-width: $wrapper-small-width;
 	}
@@ -66,13 +67,13 @@
 	display: flex;
 }
 
-@media only screen and (max-width: 56.25em) {
+@include whenMedium {
 	.collapseOnMd {
 		flex-direction: column;
 	}
 }
 
-@media only screen and (max-width: 37.5em) {
+@include whenSmall {
 	.flex {
 		flex-direction: column;
 	}

@@ -1,4 +1,4 @@
-// flex
+@import '../../global/layout/globalStyles/mixins';
 
 .flex {
 	display: flex;
@@ -13,7 +13,7 @@
 	}
 }
 
-@media only screen and (max-width: 56.25em) {
+@include whenMedium {
 	.collapseOnMd {
 		flex-direction: column;
 		&.autoLayout > * {
@@ -29,7 +29,7 @@
 	}
 }
 
-@media only screen and (max-width: 37.5em) {
+@include whenSmall {
 	.flex {
 		flex-direction: column;
 		&.autoLayout > * {

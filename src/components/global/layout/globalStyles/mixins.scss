@@ -1,0 +1,19 @@
+@import './variables';
+
+@mixin whenXSmall() {
+	@media only screen and (max-width: $breakpoint-xsmall) {
+		@content;
+	}
+}
+
+@mixin whenSmall() {
+	@media only screen and (max-width: $breakpoint-small) {
+		@content;
+	}
+}
+
+@mixin whenMedium() {
+	@media only screen and (max-width: $breakpoint-medium) {
+		@content;
+	}
+}

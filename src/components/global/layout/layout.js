@@ -5,7 +5,7 @@ import Header from '@global/header/header'
 import Footer from '@global/footer/footer'
 // import CookieBanner from '@global/cookieBanner'
 
-import './global.scss'
+import './globalStyles/global.scss'
 
 const Layout = ({ children }) => (
 	<>

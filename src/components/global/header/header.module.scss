@@ -1,4 +1,5 @@
-@import '../../global/layout/variables';
+@import '../../global/layout/globalStyles/variables';
+@import '../../global/layout/globalStyles/mixins';
 
 .header {
 	background-color: $color-header-background;
@@ -42,7 +43,7 @@
 	display: none;
 }
 
-@media only screen and (max-width: 56.25em) {
+@include whenMedium {
 	.toggle {
 		// overwrite default button styles
 		border: none;
