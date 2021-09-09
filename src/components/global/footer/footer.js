@@ -4,11 +4,9 @@ import * as styles from './footer.module.scss'
 
 const Footer = () => (
 	<footer className={styles.footer}>
-		<div className='wrapper'>
-			<nav className={styles.nav}>
-				<NavLinks />
-			</nav>
-		</div>
+		<nav className={styles.nav}>
+			<NavLinks />
+		</nav>
 	</footer>
 )
 

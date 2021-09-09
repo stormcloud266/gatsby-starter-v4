@@ -3,8 +3,13 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import * as styles from './title.module.scss'
 
-const Title = ({ tag, children, className, ...rest }) => {
-	const classes = classnames(styles.title, className && className)
+const Title = ({ tag, children, center, className, ...rest }) => {
+	const classes = classnames(
+		styles.title,
+		center && styles.center,
+		className && className
+	)
+
 	switch (tag) {
 		case 'h1':
 			return (
