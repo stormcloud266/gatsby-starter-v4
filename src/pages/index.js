@@ -1,4 +1,5 @@
 import React from 'react'
+import { Fade } from 'react-awesome-reveal'
 import Layout from '@global/layout/layout'
 import Seo from '@global/seo'
 import { Container, Title } from '@UI'
@@ -15,7 +16,9 @@ const IndexPage = () => (
 			>
 				Welcome to{' '}
 			</p>
-			<Title tag='h1'>Gatsby Starter Stormcloud</Title>
+			<Fade triggerOnce>
+				<Title tag='h1'>Gatsby Starter Stormcloud</Title>
+			</Fade>
 		</Container>
 	</Layout>
 )
