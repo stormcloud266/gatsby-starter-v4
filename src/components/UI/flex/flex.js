@@ -3,7 +3,14 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import * as styles from './flex.module.scss'
 
-const Flex = ({ collapseOnMd, autoLayout, isSection, className, children }) => {
+const Flex = ({
+	collapseOnMd,
+	autoLayout,
+	isSection,
+	className,
+	children,
+	...rest
+}) => {
 	const classes = classnames(
 		styles.flex,
 		collapseOnMd && styles.collapseOnMd,
@@ -12,9 +19,13 @@ const Flex = ({ collapseOnMd, autoLayout, isSection, className, children }) => {
 	)
 
 	return isSection ? (
-		<section className={classes}>{children}</section>
+		<section className={classes} {...rest}>
+			{children}
+		</section>
 	) : (
-		<div className={classes}>{children}</div>
+		<div className={classes} {...rest}>
+			{children}
+		</div>
 	)
 }
 
@@ -26,4 +37,5 @@ Flex.propTypes = {
 	isSection: PropTypes.bool,
 	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
+	rest: PropTypes.object,
 }

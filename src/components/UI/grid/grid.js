@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import * as styles from './grid.module.scss'
 
-const Grid = ({ children, columns, gap, className }) => {
+const Grid = ({ children, columns, gap, className, ...rest }) => {
 	const numCol =
 		columns && columns <= 6 ? `grid${columns}` : columns > 6 ? 'grid6' : 'grid3'
 	const classes = classnames(
@@ -14,7 +14,7 @@ const Grid = ({ children, columns, gap, className }) => {
 		styles.grid
 	)
 	return (
-		<div className={classes} style={{}}>
+		<div className={classes} {...rest}>
 			{children}
 		</div>
 	)
@@ -27,4 +27,5 @@ Grid.propTypes = {
 	gap: PropTypes.oneOf(['sm', 'lg']),
 	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
+	rest: PropTypes.object,
 }

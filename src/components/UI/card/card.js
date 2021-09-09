@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import * as styles from './card.module.scss'
 
-const Card = ({ image, children, shadow, outline, className }) => {
+const Card = ({ image, children, shadow, outline, className, ...rest }) => {
 	const cardImage = getImage(image)
 	const classes = classnames(
 		shadow && styles.shadow,
@@ -14,7 +14,7 @@ const Card = ({ image, children, shadow, outline, className }) => {
 	)
 
 	return (
-		<div className={classes}>
+		<div className={classes} {...rest}>
 			<GatsbyImage image={cardImage} alt='' className={styles.image} />
 			<div className={styles.textContainer}>{children}</div>
 		</div>
@@ -29,4 +29,5 @@ Card.propTypes = {
 	image: PropTypes.object,
 	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
+	rest: PropTypes.object,
 }

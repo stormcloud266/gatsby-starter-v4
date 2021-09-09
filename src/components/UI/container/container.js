@@ -16,6 +16,7 @@ const Container = ({
 	isSection,
 	className,
 	children,
+	...rest
 }) => {
 	const classes = classnames(
 		wrapper && styles.wrapper,
@@ -31,9 +32,13 @@ const Container = ({
 	)
 
 	return isSection ? (
-		<section className={classes}>{children}</section>
+		<section className={classes} {...rest}>
+			{children}
+		</section>
 	) : (
-		<div className={classes}>{children}</div>
+		<div className={classes} {...rest}>
+			{children}
+		</div>
 	)
 }
 
@@ -52,4 +57,5 @@ Container.propTypes = {
 	isSection: PropTypes.bool,
 	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
+	rest: PropTypes.object,
 }

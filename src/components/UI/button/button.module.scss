@@ -13,7 +13,8 @@
 	transition: all 0.2s;
 	box-shadow: 0px 0px hsl(0, 0%, 20%);
 
-	&:hover {
+	&:hover,
+	&:focus {
 		background-color: darken($color-cta, 10%);
 		border-color: darken($color-cta, 10%);
 		color: $color-text-dark-tertiary;
@@ -24,7 +25,8 @@
 .cta {
 	background-color: $color-cta;
 	color: $color-text-dark-tertiary;
-	&:hover {
+	&:hover,
+	&:focus {
 		background-color: darken($color-cta, 10%);
 		border-color: darken($color-cta, 10%);
 	}
