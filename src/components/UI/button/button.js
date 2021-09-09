@@ -1,8 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import classnames from 'classnames'
+import * as styles from './button.module.scss'
 
-const Button = ({ href, to, cta, children, ...rest }) => {
-	const classes = cta ? 'button cta' : 'button'
+const Button = ({ href, to, cta, children, className, ...rest }) => {
+	const classes = classnames(
+		cta && styles.cta,
+		styles.button,
+		className && className
+	)
 
 	if (href) {
 		return (

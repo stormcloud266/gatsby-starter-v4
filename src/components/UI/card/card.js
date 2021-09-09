@@ -4,11 +4,12 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import * as styles from './card.module.scss'
 
-const Card = ({ image, children, shadow, outline }) => {
+const Card = ({ image, children, shadow, outline, className }) => {
 	const cardImage = getImage(image)
 	const classes = classnames(
 		shadow && styles.shadow,
 		outline && styles.outline,
+		className && className,
 		styles.card
 	)
 

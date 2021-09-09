@@ -2,13 +2,14 @@ import React from 'react'
 import classnames from 'classnames'
 import * as styles from './grid.module.scss'
 
-const Grid = ({ children, columns, gap }) => {
+const Grid = ({ children, columns, gap, className }) => {
 	const numCol =
 		columns && columns <= 6 ? `grid${columns}` : columns > 6 ? 'grid6' : 'grid3'
 	const classes = classnames(
 		gap && gap === 'sm' && styles.gridGapSm,
 		gap && gap === 'lg' && styles.gridGapLg,
 		styles[numCol],
+		className && className,
 		styles.grid
 	)
 	return (
