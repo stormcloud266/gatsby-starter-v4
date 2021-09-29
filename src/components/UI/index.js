@@ -1,8 +1,9 @@
+import BackgroundImage from './backgroundImage/backgroundImage'
+import Button from './button/button'
+import Card from './card/card'
 import Container from './container/container'
 import Flex from './flex/flex'
-import Card from './card/card'
-import Title from './title/title'
 import Grid from './grid/grid'
-import Button from './button/button'
+import Title from './title/title'
 
-export { Container, Flex, Card, Title, Grid, Button }
+export { BackgroundImage, Button, Card, Container, Flex, Grid, Title }

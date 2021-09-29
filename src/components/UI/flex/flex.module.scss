@@ -1,46 +1,79 @@
 @import '@globalStyles/mixins';
+@import '@globalStyles/variables';
 
 .flex {
 	display: flex;
-	width: 100%;
+	align-items: center;
+	justify-content: center;
 
-	&.autoLayout > * {
-		margin-right: 2rem;
+	& > * {
 		flex: 1;
-		&:last-of-type {
-			margin-right: 0;
-		}
+		width: 100%;
 	}
+
+	& > *:first-child {
+		margin-right: $flex-column-gap;
+	}
+}
+
+.flex21 > *:first-child {
+	flex: 2;
+}
+
+.flex12 > *:last-child {
+	flex: 2;
+}
+
+.alignStart {
+	align-items: start;
 }
 
 @include whenMedium {
 	.collapseOnMd {
 		flex-direction: column;
-		&.autoLayout > * {
-			margin-right: auto;
-			margin-left: auto;
-			margin-bottom: 2rem;
-			&:last-of-type {
-				margin-bottom: 0;
-				margin-right: auto;
-				margin-left: auto;
+
+		&.flex,
+		&.flex21,
+		&.flex12 {
+			& > *:first-child {
+				margin-right: 0;
+				margin-bottom: $flex-row-gap;
 			}
+		}
+	}
+
+	.reverseOnMd {
+		& > *:nth-child(1) {
+			order: 2;
+			margin-bottom: 0;
+		}
+		& > *:nth-child(2) {
+			order: 1;
+			margin-bottom: $flex-row-gap;
 		}
 	}
 }
 
 @include whenSmall {
-	.flex {
+	.flex,
+	.flex21,
+	.flex12 {
 		flex-direction: column;
-		&.autoLayout > * {
-			margin-right: auto;
-			margin-left: auto;
-			margin-bottom: 2rem;
-			&:last-of-type {
-				margin-bottom: 0;
-				margin-right: auto;
-				margin-left: auto;
-			}
+
+		& > *:first-child {
+			margin-right: 0;
+			margin-bottom: $flex-row-gap;
+		}
+	}
+
+	.reverseOnSm {
+		& > *:nth-child(1) {
+			order: 2;
+			margin-bottom: 0;
+		}
+		& > *:nth-child(2) {
+			order: 1;
+			margin-bottom: $flex-row-gap;
 		}
 	}
 }

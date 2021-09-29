@@ -5,7 +5,10 @@ import * as styles from './flex.module.scss'
 
 const Flex = ({
 	collapseOnMd,
-	autoLayout,
+	layout,
+	alignStart,
+	reverseOnMd,
+	reverseOnSm,
 	isSection,
 	className,
 	children,
@@ -14,7 +17,11 @@ const Flex = ({
 	const classes = classnames(
 		styles.flex,
 		collapseOnMd && styles.collapseOnMd,
-		autoLayout && styles.autoLayout,
+		reverseOnMd && styles.reverseOnMd,
+		reverseOnSm && styles.reverseOnSm,
+		alignStart && styles.alignStart,
+		layout && layout === '1-2' && styles.flex12,
+		layout && layout === '2-1' && styles.flex21,
 		className && className
 	)
 
@@ -33,8 +40,10 @@ export default Flex
 
 Flex.propTypes = {
 	collapseOnMd: PropTypes.bool,
-	autoLayout: PropTypes.bool,
+	alignStart: PropTypes.bool,
 	isSection: PropTypes.bool,
+	reverseOnMd: PropTypes.bool,
+	reverseOnSm: PropTypes.bool,
 	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
 	rest: PropTypes.object,

@@ -5,6 +5,7 @@
   - [] title
   - [] siteUrl
   - [] description
+  - [] schema
 - [] Replace favicon
 - [] Replace meta card image
 - [] Remove any unused code (gatsby-node, readme, snippets, templates, cookieBanner)
@@ -13,3 +14,11 @@
   - [] Chrome
   - [] Firefox
   - [] Safari
+
+## todo
+
+aria label icons
+icons to spans
+add fout in snippets
+lang to html
+skip link

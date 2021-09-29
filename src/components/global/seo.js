@@ -44,6 +44,16 @@ const Seo = ({ title, description, url, imageUrl, article }) => {
 			<meta property='og:title' content={siteTitle} />
 			<meta property='og:description' content={siteDescription} />
 			<meta property='og:image' content={cardImageUrl} />
+
+			{/***********  schema ***********/}
+			<script type='application/ld+json'>{`
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "${data.site.siteMetadata.title}",
+        "url": "${data.site.siteMetadata.siteUrl}",
+      }
+      `}</script>
 		</Helmet>
 	)
 }
