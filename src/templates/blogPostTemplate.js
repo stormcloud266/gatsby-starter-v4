@@ -1,30 +1,25 @@
-// import React from "react"
-// import { Link, graphql } from "gatsby"
+// import React from 'react'
+// import { graphql } from 'gatsby'
 
-// import Layout from "@components/layout"
-// import SEO from "@components/seo"
+// import { Layout, Seo } from '@global'
+// import { Container } from '@UI'
 
-// const IndexPage = ({ data, location }) => (
-//   <Layout>
+// const BlogPost = ({ data, location }) => (
+// 	<Layout>
+// 		<Seo title='Home' url={location.href} />
 
-//     <SEO 
-//       title="Home"
-//       url={location.href}
-//     />
-
-//     <section className="wrapper section">
-//       {data.post.slug}
-//     </section>
-
-//   </Layout>
+// 		<Container wrapper section>
+// 			{data.post.slug}
+// 		</Container>
+// 	</Layout>
 // )
 
-// export default IndexPage
+// export default BlogPost
 
 // export const query = graphql`
-//   query getCaseStudy($slug: String!) {
-//     post: contentfulCaseStudy(slug: { eq: $slug }) {
-//       slug
-//     }
-//   }
+// 	query getCaseStudy($slug: String!) {
+// 		post: contentfulCaseStudy(slug: { eq: $slug }) {
+// 			slug
+// 		}
+// 	}
 // `
