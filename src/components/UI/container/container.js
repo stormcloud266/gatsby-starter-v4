@@ -12,6 +12,7 @@ const Container = ({
 	sectionTop,
 	sectionBottom,
 	textBlock,
+	textCenter,
 	bgDark,
 	bgAccent,
 	isSection,
@@ -28,6 +29,7 @@ const Container = ({
 		sectionTop && styles.sectionTop,
 		sectionBottom && styles.sectionBottom,
 		textBlock && styles.textBlock,
+		textCenter && styles.textCenter,
 		bgDark && styles.bgDark,
 		bgAccent && styles.bgAccent,
 		className && className
@@ -55,6 +57,7 @@ Container.propTypes = {
 	sectionTop: PropTypes.bool,
 	sectionBottom: PropTypes.bool,
 	textBlock: PropTypes.bool,
+	textCenter: PropTypes.bool,
 	bgDark: PropTypes.bool,
 	bgAccent: PropTypes.bool,
 	isSection: PropTypes.bool,

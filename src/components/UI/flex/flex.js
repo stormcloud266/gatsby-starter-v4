@@ -40,6 +40,7 @@ export default Flex
 
 Flex.propTypes = {
 	collapseOnMd: PropTypes.bool,
+	layout: PropTypes.oneOf(['1-2', '2-1']),
 	alignStart: PropTypes.bool,
 	isSection: PropTypes.bool,
 	reverseOnMd: PropTypes.bool,
