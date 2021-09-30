@@ -68,5 +68,22 @@ export const pageQuery = graphql`
 			}
 		}
 	}
+	#
 `
+```
+
+### Stop FOUT on load
+
+```scss
+.title {
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+:global(html.wf-active),
+:global(html.wf-inactive) {
+	.title {
+		opacity: 1;
+	}
+}
 ```

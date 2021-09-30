@@ -1,9 +1,10 @@
 import CookieBanner from './cookieBanner'
+import Layout from './layout'
 import NavLinks from './navLinks'
 import Seo from './seo'
 
 import Footer from './footer/footer'
 import Header from './header/header'
-import Layout from './layout/layout'
+import SkipLink from './skipLink/skipLink'
 
-export { CookieBanner, NavLinks, Seo, Footer, Header, Layout }
+export { CookieBanner, NavLinks, Seo, Footer, Header, Layout, SkipLink }

@@ -18,13 +18,12 @@ const NavLinks = () => {
 		{
 			title: 'Contact',
 			to: '/contact',
-			specialClass: 'cta',
 		},
 	]
 	return (
 		<>
-			{links.map(({ title, to, specialClass }) => (
-				<Link to={to} key={to} className={specialClass ? specialClass : null}>
+			{links.map(({ title, to }) => (
+				<Link to={to} key={to}>
 					{title}
 				</Link>
 			))}

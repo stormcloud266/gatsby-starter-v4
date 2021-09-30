@@ -29,6 +29,7 @@ const Seo = ({ title, description, url, imageUrl, article }) => {
 
 	return (
 		<Helmet>
+			<html lang='en' />
 			<title>{siteTitle}</title>
 			<meta name='description' content={siteDescription} />
 

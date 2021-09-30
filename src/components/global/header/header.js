@@ -16,7 +16,11 @@ const Header = () => {
 					Logo
 				</Link>
 
-				<button className={styles.toggle} onClick={() => toggleNav(!isOpen)}>
+				<button
+					className={styles.toggle}
+					onClick={() => toggleNav(!isOpen)}
+					aria-label={`${isOpen ? 'close' : 'open'} menu`}
+				>
 					{isOpen ? <Times /> : <Hamburger />}
 				</button>
 

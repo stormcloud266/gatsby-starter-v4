@@ -23,6 +23,11 @@ body {
 	line-height: 1.6;
 }
 
+main:focus {
+	border: none;
+	outline: none;
+}
+
 h1,
 h2,
 h3,
