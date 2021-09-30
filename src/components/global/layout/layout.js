@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Header from '@global/header/header'
-import Footer from '@global/footer/footer'
+import { Footer, Header } from '@global'
 // import CookieBanner from '@global/cookieBanner'
 
 import '@globalStyles/global.scss'

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Fade } from 'react-awesome-reveal'
-import Layout from '@global/layout/layout'
-import Seo from '@global/seo'
+import { Layout, Seo } from '@global'
 import { Container, Title } from '@UI'
 
 const IndexPage = () => (
@@ -14,10 +13,12 @@ const IndexPage = () => (
 					fontSize: '2rem',
 				}}
 			>
-				Welcome to{' '}
+				Welcome to
 			</p>
 			<Fade triggerOnce>
-				<Title tag='h1'>Gatsby Starter Stormcloud</Title>
+				<Title tag='h1' center>
+					Gatsby Starter Stormcloud
+				</Title>
 			</Fade>
 		</Container>
 	</Layout>
