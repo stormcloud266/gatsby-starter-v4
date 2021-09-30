@@ -1,5 +1,5 @@
 import React from 'react'
-import NavLinks from '@global/navLinks'
+import { NavLinks } from '@global'
 import * as styles from './footer.module.scss'
 
 const Footer = () => (
