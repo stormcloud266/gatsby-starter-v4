@@ -1,6 +1,10 @@
 @import '@globalStyles/variables';
 @import '@globalStyles/mixins';
 
+.noScroll {
+	overflow: hidden;
+}
+
 .header {
 	background-color: $color-header-background;
 	border-bottom: 2px solid $color-cta;
@@ -57,7 +61,7 @@
 	}
 
 	.nav {
-		background-color: hsl(0, 0%, 100%);
+		background-color: hsla(0, 0%, 100%, 1);
 
 		// positioning
 		position: absolute;
