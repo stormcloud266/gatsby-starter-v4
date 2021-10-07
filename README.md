@@ -17,6 +17,4 @@
 
 ## todo
 
-change text color variables names
-static query snippet
-class to navlinks
+button style mixins

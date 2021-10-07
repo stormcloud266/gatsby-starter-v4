@@ -32,7 +32,7 @@ const Header = () => {
 				</Link>
 
 				<button
-					className={styles.toggle}
+					className={classnames(styles.toggle, isNavOpen && styles.toggleOpen)}
 					onClick={() => setIsNavOpen(!isNavOpen)}
 					aria-label={`${isNavOpen ? 'close' : 'open'} menu`}
 				>

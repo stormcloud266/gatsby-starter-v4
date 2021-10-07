@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const NavLinks = () => {
+const NavLinks = ({ ctaClass }) => {
 	const links = [
 		{
 			title: 'Home',
@@ -18,12 +18,13 @@ const NavLinks = () => {
 		{
 			title: 'Contact',
 			to: '/contact',
+			cta: true,
 		},
 	]
 	return (
 		<>
-			{links.map(({ title, to }) => (
-				<Link to={to} key={to}>
+			{links.map(({ title, to, cta }) => (
+				<Link to={to} key={to} className={cta ? ctaClass : null}>
 					{title}
 				</Link>
 			))}

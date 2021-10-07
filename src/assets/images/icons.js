@@ -2,24 +2,38 @@ import React from 'react'
 
 export const Hamburger = () => (
 	<svg
-		viewBox='0 0 15 15'
-		fill='none'
 		xmlns='http://www.w3.org/2000/svg'
-		width='15'
-		height='15'
+		className='h-6 w-6'
+		fill='none'
+		viewBox='0 0 24 24'
+		stroke='currentColor'
+		width='24'
+		height='24'
 	>
-		<path d='M0 3.5h15m-15 8h15m-15-4h15' stroke='currentColor'></path>
+		<path
+			strokeLinecap='round'
+			strokeLinejoin='round'
+			strokeWidth={2}
+			d='M4 8h16M4 16h16'
+		/>
 	</svg>
 )
 
 export const Times = () => (
 	<svg
-		viewBox='0 0 15 15'
-		fill='none'
 		xmlns='http://www.w3.org/2000/svg'
-		width='15'
-		height='15'
+		className='h-6 w-6'
+		fill='none'
+		viewBox='0 0 24 24'
+		stroke='currentColor'
+		width='24'
+		height='24'
 	>
-		<path d='M1.5 1.5l12 12m-12 0l12-12' stroke='currentColor'></path>
+		<path
+			strokeLinecap='round'
+			strokeLinejoin='round'
+			strokeWidth={2}
+			d='M6 18L18 6M6 6l12 12'
+		/>
 	</svg>
 )
