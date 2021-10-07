@@ -36,10 +36,7 @@ const BackgroundImage = ({
 			className={wrapperClasses}
 		>
 			{overlayColor && (
-				<div
-					className={styles.overlay}
-					style={{ backgroundColor: overlayColor }}
-				/>
+				<div className={styles.overlay} style={{ background: overlayColor }} />
 			)}
 
 			<div className={innerClasses}>{children}</div>
