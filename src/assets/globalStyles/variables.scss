@@ -1,10 +1,12 @@
 ///////////////// colors /////////////////
-$color-text-light: hsl(0, 0%, 95%);
-$color-text-light-primary: hsl(0, 0%, 100%);
-$color-text-light-tertiary: hsl(0, 0%, 84%);
-$color-text-dark: hsl(240, 5%, 19%);
-$color-text-dark-primary: hsl(240, 8%, 12%);
-$color-text-dark-tertiary: hsl(240, 4%, 36%);
+$color-text: hsl(240, 5%, 19%);
+$color-text-primary: hsl(240, 8%, 12%);
+$color-text-tertiary: hsl(240, 4%, 36%);
+
+$color-text-accent: hsl(0, 0%, 95%);
+$color-text-accent-primary: hsl(0, 0%, 100%);
+$color-text-accent-tertiary: hsl(0, 0%, 84%);
+
 $color-link: hsl(193, 50%, 55%);
 $color-cta: hsl(193, 87%, 85%);
 $color-primary: hsl(193, 87%, 85%);

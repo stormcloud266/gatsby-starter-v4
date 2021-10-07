@@ -16,7 +16,7 @@
 
 .textContainer {
 	padding: 2rem 1.4rem;
-	color: $color-text-dark;
+	color: $color-text;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -27,7 +27,7 @@
 	h4,
 	h5,
 	h6 {
-		color: $color-text-dark-primary;
+		color: $color-text-primary;
 		margin-bottom: 1.4rem;
 	}
 }

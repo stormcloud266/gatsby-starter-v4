@@ -30,7 +30,6 @@ const Header = () => {
 				<Link to='/' className={styles.logo}>
 					Logo
 				</Link>
-				<p>{width}</p>
 
 				<button
 					className={styles.toggle}

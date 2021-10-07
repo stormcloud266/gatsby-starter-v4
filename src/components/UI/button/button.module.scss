@@ -3,7 +3,7 @@
 .button {
 	padding: 0.6rem 1.8rem;
 	cursor: pointer;
-	color: $color-text-dark-tertiary;
+	color: $color-text-tertiary;
 	font-size: 1.5rem;
 	font-weight: bold;
 	background-color: white;
@@ -17,14 +17,14 @@
 	&:focus {
 		background-color: darken($color-cta, 10%);
 		border-color: darken($color-cta, 10%);
-		color: $color-text-dark-tertiary;
-		box-shadow: 2px 2px $color-text-dark-tertiary;
+		color: $color-text-tertiary;
+		box-shadow: 2px 2px $color-text-tertiary;
 	}
 }
 
 .cta {
 	background-color: $color-cta;
-	color: $color-text-dark-tertiary;
+	color: $color-text-tertiary;
 	&:hover,
 	&:focus {
 		background-color: darken($color-cta, 10%);
