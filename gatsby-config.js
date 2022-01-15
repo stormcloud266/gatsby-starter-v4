@@ -3,8 +3,8 @@ const path = require('path')
 module.exports = {
 	siteMetadata: {
 		title: 'Gatsby Starter Stormcloud',
-		siteUrl: `https://www.gatsbyjs.com`,
-		description: `Gatsby v3 starter for getting website projects up and running fast.`,
+		siteUrl: `https://github.com/stormcloud266/gatsby-starter-v4`,
+		description: `Gatsby v4 starter for getting website projects up and running fast.`,
 	},
 	plugins: [
 		'gatsby-plugin-sass',
