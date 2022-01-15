@@ -6,7 +6,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
 const data = useStaticQuery(graphql`
-	query {
+	query HeaderQuery {
 		site {
 			siteMetadata {
 				title
