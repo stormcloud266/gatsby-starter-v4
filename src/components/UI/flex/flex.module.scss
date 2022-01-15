@@ -1,53 +1,46 @@
 @import '@globalStyles/mixins';
 @import '@globalStyles/variables';
 
-.flex {
+.flexContainer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
-	& > * {
-		flex: 1;
-		width: 100%;
-	}
-
-	& > *:first-child {
-		margin-right: $flex-column-gap;
-	}
-}
-
-.flex21 > *:first-child {
-	flex: 2;
-}
-
-.flex12 > *:last-child {
-	flex: 2;
 }
 
 .alignStart {
-	align-items: start;
+	align-items: flex-start;
+}
+
+.flexItem {
+	flex: 1;
+	width: 100%;
+	margin-right: $flex-column-gap;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
 }
 
 @include whenMedium {
 	.collapseOnMd {
 		flex-direction: column;
 
-		&.flex,
-		&.flex21,
-		&.flex12 {
-			& > *:first-child {
-				margin-right: 0;
-				margin-bottom: $flex-row-gap;
+		.flexItem {
+			margin-right: 0;
+			margin-bottom: $flex-row-gap;
+
+			&:last-of-type {
+				margin-bottom: 0;
 			}
 		}
 	}
 
 	.reverseOnMd {
-		& > *:nth-child(1) {
+		.flexItem:nth-of-type(1) {
 			order: 2;
 			margin-bottom: 0;
 		}
-		& > *:nth-child(2) {
+		.flexItem:nth-of-type(2) {
 			order: 1;
 			margin-bottom: $flex-row-gap;
 		}
@@ -55,25 +48,43 @@
 }
 
 @include whenSmall {
-	.flex,
-	.flex21,
-	.flex12 {
+	.flexContainer {
 		flex-direction: column;
+	}
 
-		& > *:first-child {
-			margin-right: 0;
-			margin-bottom: $flex-row-gap;
+	.flexItem {
+		margin-right: 0;
+		margin-bottom: $flex-row-gap;
+
+		&:last-of-type {
+			margin-bottom: 0;
 		}
 	}
 
 	.reverseOnSm {
-		& > *:nth-child(1) {
+		.flexItem:nth-of-type(1) {
 			order: 2;
 			margin-bottom: 0;
 		}
-		& > *:nth-child(2) {
+		.flexItem:nth-of-type(2) {
 			order: 1;
 			margin-bottom: $flex-row-gap;
 		}
 	}
+}
+
+.basis1 {
+	flex: 1;
+}
+
+.basis2 {
+	flex: 2;
+}
+
+.basis3 {
+	flex: 3;
+}
+
+.basis4 {
+	flex: 4;
 }

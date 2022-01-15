@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import * as styles from './flex.module.scss'
 
-const Flex = ({
+const FlexContainer = ({
 	collapseOnMd,
 	layout,
 	alignStart,
@@ -15,7 +15,7 @@ const Flex = ({
 	...rest
 }) => {
 	const classes = classnames(
-		styles.flex,
+		styles.flexContainer,
 		collapseOnMd && styles.collapseOnMd,
 		reverseOnMd && styles.reverseOnMd,
 		reverseOnSm && styles.reverseOnSm,
@@ -36,9 +36,9 @@ const Flex = ({
 	)
 }
 
-export default Flex
+export default FlexContainer
 
-Flex.propTypes = {
+FlexContainer.propTypes = {
 	collapseOnMd: PropTypes.bool,
 	layout: PropTypes.oneOf(['1-2', '2-1']),
 	alignStart: PropTypes.bool,
