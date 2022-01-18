@@ -11,8 +11,10 @@ const Button = ({ href, to, cta, children, className, ...rest }) => {
 		className && className
 	)
 
+	let element
+
 	if (href) {
-		return (
+		element = (
 			<a
 				href={href}
 				className={classes}
@@ -24,18 +26,20 @@ const Button = ({ href, to, cta, children, className, ...rest }) => {
 			</a>
 		)
 	} else if (to) {
-		return (
+		element = (
 			<Link to={to} {...rest} className={classes}>
 				{children}
 			</Link>
 		)
 	} else {
-		return (
+		element = (
 			<button {...rest} className={classes}>
 				{children}
 			</button>
 		)
 	}
+
+	return element
 }
 
 export default Button
