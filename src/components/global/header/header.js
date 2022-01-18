@@ -6,7 +6,7 @@ import { Hamburger, Times } from '@images/icons'
 import { Container } from '@UI'
 import * as styles from './header.module.scss'
 import Helmet from 'react-helmet'
-import { useCurrentWidth } from '../../../hooks'
+import { useCurrentWidth } from '@hooks'
 
 const Header = () => {
 	const [isNavOpen, setIsNavOpen] = useState(false)

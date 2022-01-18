@@ -65,6 +65,7 @@ module.exports = {
 					'@global': path.resolve(__dirname, 'src/components/global'),
 					'@UI': path.resolve(__dirname, 'src/components/UI'),
 					'@animations': path.resolve(__dirname, 'src/components/animations'),
+					'@hooks': path.resolve(__dirname, 'src/hooks'),
 					'@images': path.resolve(__dirname, 'src/assets/images'),
 					'@globalStyles': path.resolve(__dirname, 'src/assets/globalStyles'),
 				},
