@@ -5,7 +5,6 @@ import * as styles from './flex.module.scss'
 
 const FlexContainer = ({
 	collapseOnMd,
-	layout,
 	alignStart,
 	reverseOnMd,
 	reverseOnSm,
@@ -20,8 +19,6 @@ const FlexContainer = ({
 		reverseOnMd && styles.reverseOnMd,
 		reverseOnSm && styles.reverseOnSm,
 		alignStart && styles.alignStart,
-		layout && layout === '1-2' && styles.flex12,
-		layout && layout === '2-1' && styles.flex21,
 		className && className
 	)
 
@@ -40,7 +37,6 @@ export default FlexContainer
 
 FlexContainer.propTypes = {
 	collapseOnMd: PropTypes.bool,
-	layout: PropTypes.oneOf(['1-2', '2-1']),
 	alignStart: PropTypes.bool,
 	isSection: PropTypes.bool,
 	reverseOnMd: PropTypes.bool,

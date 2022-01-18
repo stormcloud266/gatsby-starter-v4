@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import * as styles from './flex.module.scss'
 
-const FlexItem = ({ className, children, basis, ...rest }) => {
+const FlexItem = ({ basis, className, children, ...rest }) => {
 	const classes = classnames(
 		styles.flexItem,
 		basis && basis === 1 && styles.basis1,
@@ -23,6 +23,7 @@ const FlexItem = ({ className, children, basis, ...rest }) => {
 export default FlexItem
 
 FlexItem.propTypes = {
+	basis: PropTypes.oneOf([1, 2, 3, 4]),
 	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
 	rest: PropTypes.object,
