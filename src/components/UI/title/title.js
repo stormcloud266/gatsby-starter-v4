@@ -3,10 +3,18 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import * as styles from './title.module.scss'
 
-const Title = ({ tag, children, center, className, ...rest }) => {
+const Title = ({
+	tag,
+	children,
+	center,
+	overflowHidden,
+	className,
+	...rest
+}) => {
 	const classes = classnames(
 		styles.title,
 		center && styles.center,
+		overflowHidden && styles.overflowHidden,
 		className && className
 	)
 
