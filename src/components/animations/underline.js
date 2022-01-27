@@ -6,9 +6,10 @@ const Underline = ({
 	color = '#2e2e33',
 	delay = 0,
 	duration = 1.5,
-	transformDuration = 1.5,
 	triggerOnce = true,
 	inline,
+	style,
+	children,
 	...rest
 }) => {
 	const variants = {
@@ -36,10 +37,37 @@ const Underline = ({
 		...rest,
 	}
 
+	const commonStyles = {
+		position: 'absolute',
+		left: 0,
+		width: '100%',
+	}
+
 	return inline ? (
-		<motion.span style={{ display: 'block' }} {...commonProps} />
+		<span style={{ position: 'relative', display: 'inline-block' }}>
+			{children}
+			<motion.span
+				style={{
+					display: 'block',
+					bottom: -2,
+					...commonStyles,
+					...style,
+				}}
+				{...commonProps}
+			/>
+		</span>
 	) : (
-		<motion.div {...commonProps} />
+		<div style={{ position: 'relative' }}>
+			{children}
+			<motion.div
+				style={{
+					bottom: 0,
+					...commonStyles,
+					...style,
+				}}
+				{...commonProps}
+			/>
+		</div>
 	)
 }
 
@@ -51,5 +79,7 @@ Underline.propTypes = {
 	duration: PropTypes.number,
 	triggerOnce: PropTypes.bool,
 	inline: PropTypes.bool,
+	style: PropTypes.object,
+	children: PropTypes.node.isRequired,
 	rest: PropTypes.object,
 }

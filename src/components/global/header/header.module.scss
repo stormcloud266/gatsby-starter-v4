@@ -7,7 +7,6 @@
 
 .header {
 	background-color: $color-header-background;
-	border-bottom: 2px solid $color-cta;
 
 	// positioning
 	position: sticky;
@@ -28,6 +27,11 @@
 
 	a {
 		margin-left: 4.8rem;
+		color: $color-text-tertiary;
+
+		&:hover {
+			color: $color-link-hover;
+		}
 	}
 }
 
@@ -35,6 +39,8 @@
 	padding: 1.2rem 0;
 	position: relative;
 	z-index: 1000;
+	color: $color-text-tertiary;
+	font-weight: bold;
 }
 
 .toggle {
