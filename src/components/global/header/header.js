@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 import classnames from 'classnames'
 import { NavLinks } from '@global'
-import { Hamburger, Times } from '@images/icons'
 import { Container } from '@UI'
 import * as styles from './header.module.scss'
 import Helmet from 'react-helmet'
 import { useCurrentWidth } from '@hooks'
+import NavButton from './navButton'
 
 const Header = () => {
 	const [isNavOpen, setIsNavOpen] = useState(false)
@@ -31,13 +31,10 @@ const Header = () => {
 					Logo
 				</Link>
 
-				<button
-					className={classnames(styles.toggle, isNavOpen && styles.toggleOpen)}
+				<NavButton
+					isOpen={isNavOpen}
 					onClick={() => setIsNavOpen(!isNavOpen)}
-					aria-label={`${isNavOpen ? 'close' : 'open'} menu`}
-				>
-					{isNavOpen ? <Times /> : <Hamburger />}
-				</button>
+				/>
 
 				<nav className={classnames(styles.nav, isNavOpen && styles.open)}>
 					<NavLinks />

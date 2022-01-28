@@ -18,9 +18,9 @@ const IndexPage = () => (
 				justifyContent: 'center',
 			}}
 		>
-			<Fade x={40} threshold={0.8} noOpacityAnim transformDuration={1.7}>
+			<Fade x={-40} threshold={0.8} noOpacityAnim transformDuration={1.7}>
 				<Slide
-					from='right'
+					from='left'
 					style={{
 						margin: '0 auto',
 						padding: '8px',
