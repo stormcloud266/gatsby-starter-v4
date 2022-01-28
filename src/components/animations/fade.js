@@ -11,12 +11,13 @@ const Fade = ({
 	y = 0,
 	x = 0,
 	triggerOnce = true,
+	noOpacityAnim = false,
 	inline,
 	children,
 	...rest
 }) => {
 	const variants = {
-		hidden: { opacity: 0, y, x },
+		hidden: { opacity: noOpacityAnim ? 1 : 0, y, x },
 		visible: {
 			opacity: 1,
 			y: 0,
@@ -68,6 +69,7 @@ Fade.propTypes = {
 	y: PropTypes.number,
 	x: PropTypes.number,
 	triggerOnce: PropTypes.bool,
+	noOpacityAnim: PropTypes.bool,
 	inline: PropTypes.bool,
 	children: PropTypes.node.isRequired,
 	rest: PropTypes.object,
