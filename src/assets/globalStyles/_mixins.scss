@@ -17,3 +17,9 @@
 		@content;
 	}
 }
+
+@mixin whenLarge() {
+	@media only screen and (max-width: $breakpoint-large) {
+		@content;
+	}
+}
