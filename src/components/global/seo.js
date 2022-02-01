@@ -23,6 +23,7 @@ const Seo = ({ title, description, url, imageUrl, article }) => {
 		: data.site.siteMetadata.siteUrl + data.file.publicURL
 
 	const siteTitle = title ? title : data.site.siteMetadata.title
+	const siteUrl = url ? url : data.site.siteMetadata.siteUrl
 	const siteDescription = description
 		? description
 		: data.site.siteMetadata.description
@@ -40,7 +41,7 @@ const Seo = ({ title, description, url, imageUrl, article }) => {
 			<meta name='twitter:image' content={cardImageUrl} />
 
 			{/***********  open graph ***********/}
-			<meta property='og:url' content={url} />
+			<meta property='og:url' content={siteUrl} />
 			<meta property='og:type' content={article ? 'article' : 'website'} />
 			<meta property='og:title' content={siteTitle} />
 			<meta property='og:description' content={siteDescription} />
