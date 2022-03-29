@@ -11,23 +11,15 @@ module.exports = {
 		'gatsby-plugin-image',
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-sitemap',
+		'gatsby-plugin-robots-txt',
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
 				icon: 'src/assets/images/favicon.png',
 			},
 		},
-		'gatsby-plugin-mdx',
 		'gatsby-plugin-sharp',
 		'gatsby-transformer-sharp',
-		{
-			resolve: 'gatsby-plugin-web-font-loader',
-			options: {
-				google: {
-					families: ['Heebo:400,700'],
-				},
-			},
-		},
 		{
 			resolve: `gatsby-plugin-gdpr-cookies`,
 			options: {
