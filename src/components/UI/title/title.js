@@ -7,6 +7,10 @@ const Title = ({
 	tag,
 	children,
 	center,
+	lg,
+	md,
+	sm,
+	shadow,
 	overflowHidden,
 	className,
 	...rest
@@ -14,6 +18,10 @@ const Title = ({
 	const classes = classnames(
 		styles.title,
 		center && styles.center,
+		shadow && styles.shadow,
+		lg && styles.lg,
+		md && styles.md,
+		sm && styles.sm,
 		overflowHidden && styles.overflowHidden,
 		className && className
 	)
@@ -75,6 +83,11 @@ export default Title
 Title.propTypes = {
 	tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p']),
 	className: PropTypes.string,
+	center: PropTypes.bool,
+	shadow: PropTypes.bool,
+	lg: PropTypes.bool,
+	md: PropTypes.bool,
+	sm: PropTypes.bool,
 	children: PropTypes.node.isRequired,
 	rest: PropTypes.object,
 }
